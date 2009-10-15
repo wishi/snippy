@@ -18,7 +18,7 @@
 #include <stdlib.h>   
 #include <dirent.h>              // wichtige Includes
 
-#include <unistd.h>	  
+// #include <unistd.h>	  
 
 // inkonsistent durch GNU C Standard: 
 typedef int bool;
