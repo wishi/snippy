@@ -1,0 +1,36 @@
+ \documentclass[a4paper,
+		,11pt
+		,smallheadings
+		,DIVcalc  % Satzspiegel berechnen
+		,pagesize % Papiergroesse an DVI und PDF Uebergeben
+		,ngerman  % neue Rechtschreibung
+		,oneside  % Einseitiger Druck
+		,fleqn    % Abgesetzte Formeln links anordnen, nicht zentriert  
+		]
+		{scrartcl}
+		\usepackage[ngerman]{babel} % Deutsche Sprachanpassungen
+		\usepackage[T1]{fontenc} % Silbentrennung bei Sonderzeichen
+		\usepackage[latin1]{inputenc} % direkte Angabe von Umlauten im Dokument 
+% Zusatzzeichen und Umgebungen f. Mathe werden geladen.
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{textcomp}  
+\usepackage{graphicx}
+
+% \usepackage[pdftex]{hyperref} Wird erst einmal nicht benoetigt 
+% Schrift:
+\usepackage{mathpazo} % Palatino 
+
+\begin{document}
+\section*{foo}
+
+
+
+\begin{align*}
+\frac{9}{2}
+\end{align*}
+
+
+
+\end{document}
