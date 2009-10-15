@@ -14,7 +14,7 @@
  *  http://libslack.org/manpages/snprintf.3.html
  *  
  *  @Deps:
- *  glibc > 2     -  wegen strncpy return
+ *  glibc > 2     -  wegen snprintf return
  *                   
  *
  **/ 
@@ -54,7 +54,7 @@ main(void)
       {
          entry = readdir(directory);
          
-         if (entry != 0)      // falls kein File だa
+         if (entry != 0)      // falls kein File da
          {	
             // es wird nur der erste Letter verglichen
             // ist es ein . wird es uebergangen (default)
