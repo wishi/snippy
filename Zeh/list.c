@@ -13,6 +13,7 @@
  *  http://opengroup.org/onlinepubs/007908799/xsh/opendir.html
  *  http://libslack.org/manpages/snprintf.3.html
  *  http://www.opengroup.org/onlinepubs/009695399/functions/getcwd.html
+ *  http://www.gnu.org/s/libc/manual/html_node/Limits-for-Files.html
  *
  *  @DEPS:
  *  glibc > 2        -  wegen snprintf return
@@ -21,12 +22,18 @@
  *                   
  **/ 
 
+
 #include <stdio.h>   
 #include <stdlib.h>   
 
 #include <dirent.h>              // wichtige Includes
 #include <unistd.h>	  
 
+
+// BSD's dirent.h differs 
+#ifndef MAXNAMLEN
+   #define NAME_MAX MAXNAMELEN
+#endif 
 
 // inkonsistent durch GNU C Standard (kein Bool): 
 typedef int bool;
@@ -46,7 +53,8 @@ main(void)
    
    char *buf, *ptr;
    unsigned long size;
-   char string[256];             // wird speziell behandelt
+   char string[MAXNAMLEN];       // wird speziell behandelt - Konstante aus dirent.h
+                                 // BSD: NAME_MAX
 
    size = (unsigned long)(pathconf(".", _PC_PATH_MAX));
    
