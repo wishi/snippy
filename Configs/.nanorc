@@ -1,0 +1,11 @@
+set autoindent
+unset backup
+set multibuffer
+unset noconvert
+unset nofollow
+set smooth
+set speller aspell
+syntax "default"  
+color white "('[^']*')|(\"[^"]*\")"
+color blue start="<[^\?]" end="[^\?]>"
+set speller "aspell -x -c"
