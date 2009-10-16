@@ -1,29 +1,31 @@
 /**  
- *  @Author: Marius Ciepluch
- *  
+ *  @AUTHOR: 
+ *  Marius Ciepluch
+ *
  *  @INFO: 
  *  Ein einfaches Unix API Beispiel fürs Listen von Files im aktiven
  *  Verzeichnis. Versteckte Dateien werden ignoriert.
  *  
  *  @MISC:
- *  Achtung: die POSIX Lib wurde NICHT benutzt!
  *  http://www.opengroup.org/onlinepubs/007908775/xsh/unistd.h.html
  *
- *  @Ref:
+ *  @REF_LINKS:
  *  http://opengroup.org/onlinepubs/007908799/xsh/opendir.html
  *  http://libslack.org/manpages/snprintf.3.html
- *  
- *  @Deps:
- *  glibc > 2     -  wegen snprintf return
- *                   
+ *  http://www.opengroup.org/onlinepubs/009695399/functions/getcwd.html
  *
+ *  @DEPS:
+ *  glibc > 2        -  wegen snprintf return
+ *  GNU C            -  weil nicht für M$ 
+ *                      Unix-artiges OS
+ *                   
  **/ 
 
 #include <stdio.h>   
 #include <stdlib.h>   
 
 #include <dirent.h>              // wichtige Includes
-// #include <unistd.h>	  
+#include <unistd.h>	  
 
 
 // inkonsistent durch GNU C Standard (kein Bool): 
@@ -42,11 +44,16 @@ main(void)
    
    bool done = FALSE;
    
-   char dir[1024], *s;
-   char string[256]; 
+   char *buf, *ptr;
+   unsigned long size;
+   char string[256];             // wird speziell behandelt
 
-  	s = getwd(dir);               // holt _w_orking _d_irectory 
-   directory = opendir(s);       // oeffnet wd, hier s
+   size = pathconf(".", _PC_PATH_MAX);
+   
+   if ((buf = (char *) malloc((size_t)size)) != NULL)
+      ptr = getcwd(buf, (size_t)size);
+   
+   directory = opendir(ptr);       // oeffnet wd
      
    if (directory != 0)           // sofern wd vorhanden
    {
@@ -56,16 +63,18 @@ main(void)
          
          if (entry != 0)      // falls kein File da
          {	
+            
             // es wird nur der erste Letter verglichen
             // ist es ein . wird es uebergangen (default)
             if ((strncmp(entry->d_name, ".", 1) != 0))       
             {
                // Länge ermitteln
-               int len = snprintf(NULL, 0, "%s/%s", s, entry->d_name);
+               int len = snprintf(NULL, 0, "%s/%s", ptr, entry->d_name);
+               len=len+3;
                
                // es wird snprintf benutzt um hier einen Stackbuffer-
                // overflow zu vermeiden. 
-               snprintf(string, len, "%s/%s", s, entry->d_name); 
+               snprintf(string, len, "%s/%s", ptr, entry->d_name); 
                printf("%s \n", string);
             }	
          }
