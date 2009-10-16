@@ -1,0 +1,54 @@
+(version 1)
+(debug deny) ; Use (debug all) to see every action)
+(allow network-outbound)
+(allow signal)
+(allow ipc-posix-shm) ; Needed for POSIX shared memory
+;(allow process-exec (regex #"^/Applications/Safari.app/*"))
+(allow sysctl-read)
+(allow file-read-metadata)
+(allow signal)
+(allow process*)
+;(allow mach*)
+(allow mach-lookup)
+;(allow process-exec (regex "^/System/Library/CoreServices/*"))
+;; Allow to read these files:
+(allow file-read*
+(regex
+#"^/Users/wishi/$"
+#"^/Users/wishi/downloads"
+#"^/Volumes/p00l_intern/downloads"
+#"^/Users/wishi/Library"
+#"^/Users/wishi/Public"
+#"^/Users/wishi/Sites"
+#"^/Applications/Safari.app"
+#"^/Library/*"
+#"^/System/Library/*"
+#"^/Library/Application Support/SIMBL/Plugins/*"
+#"^/Library/Application Support/Glims/*"
+#"^/Library/Application Support/Glims/PlugIns/Glims.bundle/Contents/MacOS/*"
+#"^/Users/wishi/Library/Internet Plug-Ins/*"
+#"^/Library/Internet Plug-Ins/*"
+#"^/usr/lib/*"
+#"^/usr/share/*"
+#"^/private/*"
+#"^/dev/*"
+#"^/Applications/1Password.app"
+#"^/Volumes/MacOS_10.4/Applications/Evernote.app/Contents/*"
+#"^/Users/wishi/Library/Application Support/Evernote/*"
+#"^/Library/InputManagers/*"
+)
+)
+;; Allow to write these files:
+(allow file-write*
+(regex
+#"^/Users/wishi/Downloads/*"
+#"^/Volumes/p00l_intern/downloads"
+#"^/Users/wishi/Library/.*"
+#"^/private/var/*"
+#"^/dev/dtracehelper"
+#"^/Library/Application Support/SIMBL/Plugins/*"
+#"^/Library/Application Support/Glims/PlugIns/Glims.bundle/Contents/MacOS/*"
+#"^/Users/wishi/Library/Application Support/Evernote/*"
+)
+)
+(deny default)
