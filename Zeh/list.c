@@ -6,22 +6,18 @@
  *  Ein einfaches Unix API Beispiel fürs Listen von Files im aktiven
  *  Verzeichnis. Versteckte Dateien werden ignoriert.
  *  
- *  @MISC:
- *  http://www.opengroup.org/onlinepubs/007908775/xsh/unistd.h.html
- *
  *  @REF_LINKS:
  *  http://opengroup.org/onlinepubs/007908799/xsh/opendir.html
  *  http://libslack.org/manpages/snprintf.3.html
  *  http://www.opengroup.org/onlinepubs/009695399/functions/getcwd.html
  *  http://www.gnu.org/s/libc/manual/html_node/Limits-for-Files.html
+ *  http://www.opengroup.org/onlinepubs/007908775/xsh/unistd.h.html
  *
  *  @DEPS:
  *  glibc > 2        -  wegen snprintf return
  *  GNU C            -  weil nicht für M$ 
  *                      Unix-artiges OS
- *                   
  **/ 
-
 
 #include <stdio.h>   
 #include <stdlib.h>   
@@ -29,18 +25,16 @@
 #include <dirent.h>              // wichtige Includes
 #include <unistd.h>	  
 
-
 // BSD's dirent.h differs 
 #ifndef MAXNAMLEN
    #define NAME_MAX MAXNAMELEN
 #endif 
 
-// inkonsistent durch GNU C Standard (kein Bool): 
+// inkonsistent durch GNU C Standard (kein Bool) 
 typedef int bool;
 
 #define TRUE   (1)
 #define FALSE  (0)
-
 
 int 
 main(void)
