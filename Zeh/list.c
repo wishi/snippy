@@ -48,7 +48,7 @@ main(void)
    unsigned long size;
    char string[256];             // wird speziell behandelt
 
-   size = pathconf(".", _PC_PATH_MAX);
+   size = (unsigned long)(pathconf(".", _PC_PATH_MAX));
    
    if ((buf = (char *) malloc((size_t)size)) != NULL)
       ptr = getcwd(buf, (size_t)size);
@@ -69,12 +69,12 @@ main(void)
             if ((strncmp(entry->d_name, ".", 1) != 0))       
             {
                // Länge ermitteln
-               int len = snprintf(NULL, 0, "%s/%s", ptr, entry->d_name);
+               size_t len = snprintf(NULL, 0, "%s/%s", ptr, entry->d_name);
                len=len+3;
                
                // es wird snprintf benutzt um hier einen Stackbuffer-
                // overflow zu vermeiden. 
-               snprintf(string, len, "%s/%s", ptr, entry->d_name); 
+               (void)snprintf(string, len, "%s/%s", ptr, entry->d_name); 
                printf("%s \n", string);
             }	
          }
@@ -85,9 +85,10 @@ main(void)
       } // -- end of while
    } 
    closedir(directory);
-   
-   return 1;
-   exit(0);
+   free (buf);
+
+   return 1;      // formal return
+   exit(0);      // clean exit
 
 } // -- end of main
 // EOF
