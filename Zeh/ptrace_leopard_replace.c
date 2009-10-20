@@ -24,8 +24,8 @@
 void 
 error(char *msg)
 {
-        printf("[!] error: %s.\n", msg);
-        exit(1);
+   printf("[!] error: %s.\n", msg);
+   exit(1);
 } // -- end of error() 
 
 
@@ -48,21 +48,26 @@ main(int ac, char **av)
 
    pid = atoi(av[1]);
 
-   if(task_for_pid(mach_task_self(), pid, &port))
+   if(task_for_pid(mach_task_self(), 
+            pid, 
+            &port))
       error("cannot get port");
 
    // better shut down the task while we do this.
-   if(task_suspend(port)) error("suspending the task");
+   if(task_suspend(port)) 
+      error("suspending the task");
 
-   if(task_threads(port, &thread_list, &thread_count))
-                error("cannot get list of tasks");
+   if(task_threads(port, 
+            &thread_list, 
+            &thread_count))
+      error("cannot get list of tasks");
 
 
    if(thread_get_state(
-      thread_list[thread],
-      i386_THREAD_STATE,
-      (thread_state_t)&i386_state,
-      &sc)
+         thread_list[thread],
+         i386_THREAD_STATE,
+         (thread_state_t)&i386_state,
+         &sc)
      ) error("getting state from thread");
 
     printf("old r3: 0x%x\n",i386_state.__eax);
@@ -70,13 +75,14 @@ main(int ac, char **av)
     i386_state.__eax = 0x01;
 
     if(thread_set_state(
-      thread_list[thread],
-      i386_THREAD_STATE,
-      (thread_state_t)&i386_state,
-      sc)
+         thread_list[thread],
+         i386_THREAD_STATE,
+         (thread_state_t)&i386_state,
+         sc)
      ) error("setting state");
 
-    if(task_resume(port)) error("cannot resume the task");
+    if(task_resume(port)) 
+       error("cannot resume the task");
 
     return 0;
 
