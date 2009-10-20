@@ -74,7 +74,7 @@ main(int ac, char **av)
       i386_THREAD_STATE,
       (thread_state_t)&i386_state,
       sc)
-      ) error("setting state");
+     ) error("setting state");
 
     if(task_resume(port)) error("cannot resume the task");
 
