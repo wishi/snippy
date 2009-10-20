@@ -4,9 +4,10 @@
  *
  * - nemo
  *
- * ported to Leopard... sets r3 = EAX by FG
+ * ported to Leopard... sets r3 = EAX 
+ * by FG
+ * 
  * uses __eax due a relatively recent change 
- *
  * - wishi
  *
  * REF:
@@ -19,12 +20,14 @@
 #include <mach/mach_types.h>
 #include <mach/i386/thread_status.h>
 
+
 void 
 error(char *msg)
 {
         printf("[!] error: %s.\n", msg);
         exit(1);
-}
+} // -- end of error() 
+
 
 int 
 main(int ac, char **av)
@@ -35,8 +38,8 @@ main(int ac, char **av)
    long thread = 0;        // for first thread
    thread_act_port_array_t thread_list;
    mach_msg_type_number_t thread_count;
-   task_t  port;
-   pid_t   pid;
+   task_t port;
+   pid_t  pid;
 
    if(ac != 2) {
       printf("usage: %s <pid>\n",av[0]);
@@ -77,5 +80,5 @@ main(int ac, char **av)
 
     return 0;
 
-} // -- end of main
-
+} // -- end of main()
+// EOF
