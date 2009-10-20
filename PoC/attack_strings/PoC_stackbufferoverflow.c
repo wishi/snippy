@@ -23,7 +23,6 @@ void
 main(int argc, char* argv[]){
 
    smash(argv[1]);   // first argument = programm, second = input ;)
-   return 1;
 
 } // -- end of main()
 
