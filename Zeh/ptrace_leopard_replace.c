@@ -67,8 +67,8 @@ main(int ac, char **av)
          thread_list[thread],
          i386_THREAD_STATE,
          (thread_state_t)&i386_state,
-         &sc)
-     ) error("getting state from thread");
+         &sc)) 
+      error("getting state from thread");
 
     printf("old r3: 0x%x\n",i386_state.__eax);
 
@@ -78,8 +78,8 @@ main(int ac, char **av)
          thread_list[thread],
          i386_THREAD_STATE,
          (thread_state_t)&i386_state,
-         sc)
-     ) error("setting state");
+         sc))
+      error("setting state");
 
     if(task_resume(port)) 
        error("cannot resume the task");
