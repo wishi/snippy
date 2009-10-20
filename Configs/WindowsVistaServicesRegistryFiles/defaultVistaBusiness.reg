@@ -1,0 +1,484 @@
+Windows Registry Editor Version 5.00
+;[START] SpeedyVista.com DEFAULT Vista Business Services - last updated: 10/03/2007
+
+;Application Experience
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AeLookupSvc]
+"Start"=dword:00000002
+
+;Application Information
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Appinfo]
+"Start"=dword:00000003
+
+;Application Layer Gateway Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ALG]
+"Start"=dword:00000003
+
+;Application Management
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AppMgmt]
+"Start"=dword:00000003
+
+;Background Intelligent Transfer Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BITS]
+"DelayedAutoStart"=dword:00000001
+"Start"=dword:00000002
+
+;Base Filtering System
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BFE]
+"Start"=dword:00000002
+
+;Block Level Backup Engine Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wbengine]
+"Start"=dword:00000003
+
+;Certificate Propagation
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertPropSvc]
+"Start"=dword:00000003
+
+;CNG Key Isolation
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\KeyIso]
+"Start"=dword:00000003
+
+;COM+ Event System
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventSystem]
+"Start"=dword:00000002
+
+;COM+ System Application
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\COMSysApp]
+"Start"=dword:00000003
+
+;Computer Browser
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Browser]
+"Start"=dword:00000002
+
+;Cryptographic Services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CryptSvc]
+"Start"=dword:00000002
+
+;Desktop Window Manager Session Manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UxSms]
+"Start"=dword:00000002
+
+;DFS Replication
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR]
+"Start"=dword:00000003
+
+;DHCP Client
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dhcp]
+"Start"=dword:00000002
+
+;Diagnostic Policy Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DPS]
+"Start"=dword:00000002
+
+;Diagnostic Service Host
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdiServiceHost]
+"Start"=dword:00000003
+
+;Diagnostic System Host
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdiSystemHost]
+"Start"=dword:00000003
+
+;Distributed Link Tracking Client
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TrkWks]
+"Start"=dword:00000002
+
+;Distributed Transaction Coordinator
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC]
+"Start"=dword:00000003
+
+;DNS Client
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache]
+"Start"=dword:00000002
+
+;Extensible Authentication Protocol
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EapHost]
+"Start"=dword:00000003
+
+;Fax 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Fax]
+"Start"=dword:00000003
+
+;Function Discovery Provider Host
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\fdPHost]
+"Start"=dword:00000003
+
+;Function Discovery Resource Publication
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FDResPub]
+"Start"=dword:00000003
+
+;Health Key and Certificate Management
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\hkmsvc]
+"Start"=dword:00000003
+
+;Human Interface Device Access
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\hidserv]
+"Start"=dword:00000003
+
+;IKE and AuthIP Ipsec Keying Modules
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IKEEXT]
+"Start"=dword:00000002
+
+;Interactive Services Detection
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UI0Detect]
+"Start"=dword:00000003
+
+;Internet Connection Sharing (ICS)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess]
+"Start"=dword:00000004
+
+;IP Helper
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc]
+"Start"=dword:00000002
+
+;IPsec Policy Agent
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
+"Start"=dword:00000002
+
+;KtmRm for Distributed Transaction Coordinator
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\KtmRm]
+"DelayedAutoStart"=dword:00000001
+"Start"=dword:00000002
+
+;Link-Layer Topology Discovery Mapper
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lltdsvc]
+"Start"=dword:00000003
+
+;Microsoft .NET Framework NGEN
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\clr_optimization_v2.0.50727_32]
+"Start"=dword:00000003
+
+;Microsoft iSCSI Initiator Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSiSCSI]
+"Start"=dword:00000003
+
+;Microsoft Software Shadow Copy Provider
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\swprv]
+"Start"=dword:00000003
+
+;Multimedia Class Scheduler
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MMCSS]
+"Start"=dword:00000002
+
+;Net.Tcp Port Sharing Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetTcpPortSharing]
+"Start"=dword:00000004
+
+;Netlogon
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetLogon]
+"Start"=dword:00000003
+
+;Network Access Protection Agent
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\napagent]
+"Start"=dword:00000003
+
+;Network Connections
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netman]
+"Start"=dword:00000003
+
+;Network List Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\netprofm]
+"Start"=dword:00000002
+
+;Network Location Awareness
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc]
+"Start"=dword:00000002
+
+;Network Store Interface Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\nsi]
+"Start"=dword:00000002
+
+;Offline Files
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CscService]
+"Start"=dword:00000002
+
+;Peer Name Resolution Protocol
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PNRPsvc]
+"Start"=dword:00000003
+
+;Peer Networking Grouping
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\p2psvc]
+"Start"=dword:00000003
+
+;Peer Networking Identity Manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\p2pimsvc]
+"Start"=dword:00000003
+
+;Performance Logs & Alerts
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pla]
+"Start"=dword:00000003
+
+;PnP-X IP Bus Enumerator
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IPBusEnum]
+"Start"=dword:00000003
+
+;PNRP Machine Name Publication Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PNRPAutoReg]
+"Start"=dword:00000003
+
+;Portable Device Enumerator Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WPDBusEnum]
+"Start"=dword:00000002
+
+;Print Spooler
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler]
+"Start"=dword:00000002
+
+;Problem Reports and Solutions Control Panel Support
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wercplsupport]
+"Start"=dword:00000003
+
+;Program Compatibility Assistant Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PcaSvc]
+"Start"=dword:00000002
+
+;Protected Storage
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProtectedStorage]
+"Start"=dword:00000003
+
+;Quality Windows Audio Video Experience
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\QWAVE]
+"Start"=dword:00000003
+
+;ReadyBoost
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EMDMgmt]
+"Start"=dword:00000002
+
+;Remote Access Auto Connection Manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasAuto]
+"Start"=dword:00000003
+
+;Remote Access Connection Manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan]
+"Start"=dword:00000003
+
+;Remote Procedure Call (RPC) Locator
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RpcLocator]
+"Start"=dword:00000003
+
+;Remote Registry
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry]
+"Start"=dword:00000003
+
+;Routing and Remote Access
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess]
+"Start"=dword:00000004
+
+;Secondary Logon
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\seclogon]
+"Start"=dword:00000002
+
+;Security Accounts Manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SamSs]
+"Start"=dword:00000002
+
+;Security Center
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
+"DelayedAutoStart"=dword:00000001
+"Start"=dword:00000002
+
+;Server
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer]
+"Start"=dword:00000002
+
+;Shell Hardware Detection
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ShellHWDetection]
+"Start"=dword:00000002
+
+;SL UI Notification Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SLUINotify]
+"Start"=dword:00000003
+
+;Smart Card
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SCardSvr]
+"Start"=dword:00000003
+
+;Smart Card Removal Policy
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SCPolicySvc]
+"Start"=dword:00000003
+
+;SNMP Trap
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SNMPTRAP]
+"Start"=dword:00000003
+
+;Software Licensing
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\slsvc]
+"Start"=dword:00000002
+
+;SSDP Discovery
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SSDPSRV]
+"Start"=dword:00000003
+
+;Superfetch
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000002
+
+;System Event Notification Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SENS]
+"Start"=dword:00000002
+
+;Tablet PC Input Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService]
+"Start"=dword:00000002
+
+;TCP/IP NetBIOS Helper
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lmhosts]
+"Start"=dword:00000002
+
+;Telephony
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TapiSrv]
+"Start"=dword:00000003
+
+;Terminal Services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService]
+"Start"=dword:00000002
+
+;Terminal Services Configuration
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SessionEnv]
+"Start"=dword:00000003
+
+;Terminal Services UserMode Port Redirector
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UmRdpService]
+"Start"=dword:00000003
+
+;Themes
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Themes]
+"Start"=dword:00000002
+
+;Thread Ordering Server
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\THREADORDER]
+"Start"=dword:00000003
+
+;TPM Base Services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TBS]
+"Start"=dword:00000003
+
+;UPnP Device Host
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\upnphost]
+"Start"=dword:00000003
+
+;User Profile Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc]
+"Start"=dword:00000002
+
+;Virtual Disk
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\vds]
+"Start"=dword:00000003
+
+;Volume Shadow Copy
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\VSS]
+"Start"=dword:00000003
+
+;WebClient
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient]
+"Start"=dword:00000002
+
+;Windows Audio
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Audiosrv]
+"Start"=dword:00000002
+
+;Windows Audio Endpoint Builder
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AudioEndpointBuilder]
+"Start"=dword:00000002
+
+;Windows Backup
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SDRSVC]
+"Start"=dword:00000003
+
+;Windows CardSpace
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\idsvc]
+"Start"=dword:00000003
+
+;Windows Color System
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WcsPlugInService]
+"Start"=dword:00000003
+
+;Windows Connect Now - Config Registrar
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wcncsvc]
+"Start"=dword:00000003
+
+;Windows Defender
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
+"Start"=dword:00000002
+
+;Windows Driver Foundation - User-mode Driver Framework
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wudfsvc]
+"Start"=dword:00000003
+
+;Windows Error Reporting Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
+"Start"=dword:00000002
+
+;Windows Event Collector
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wecsvc]
+"Start"=dword:00000003
+
+;Windows Event Log
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog]
+"Start"=dword:00000002
+
+;Windows Firewall
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc]
+"Start"=dword:00000002
+
+;Windows Image Acquisition (WIA)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stisvc]
+"Start"=dword:00000003
+
+;Windows Installer
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\msiserver]
+"Start"=dword:00000003
+
+;Windows Management Instrumentation
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Winmgmt]
+"Start"=dword:00000002
+
+;Windows Media Player Network Sharing Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WMPNetworkSvc]
+"Start"=dword:00000003
+
+;Windows Modules Installer
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TrustedInstaller]
+"Start"=dword:00000003
+
+;Windows Presentation Foundation Font Cache 3.0.0.0
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0]
+"Start"=dword:00000003
+
+;Windows Remote Management (WS-Management)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinRM]
+"Start"=dword:00000003
+
+;Windows Search
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wsearch]
+"Start"=dword:00000002
+
+;Windows Time
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time]
+"Start"=dword:00000002
+
+;Windows Update
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"DelayedAutoStart"=dword:00000001
+"Start"=dword:00000002
+
+;WinHTTP Web Proxy Auto-Discovery Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinHttpAutoProxySvc]
+"Start"=dword:00000003
+
+;Wired AutoConfig
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dot3svc]
+"Start"=dword:00000003
+
+;WLAN AutoConfig
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wlansvc]
+"Start"=dword:00000003
+
+;WMI Performance Adapter
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wmiApSrv]
+"Start"=dword:00000003
+
+;Workstation
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation]
+"Start"=dword:00000002
+
+;[END] SpeedyVista.com DEFAULT Vista Business Services
