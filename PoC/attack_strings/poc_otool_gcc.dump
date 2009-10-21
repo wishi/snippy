@@ -1,0 +1,71 @@
+/Volumes/docs/code/snippy/PoC/attack_strings/poc:
+
+md5: e9f9c5bca813fe7500cf5c5e94c46a4a
+
+(__TEXT,__text) section
+
+start:
+	+0	00001f64  6a00					  pushl		  $0x00
+	+2	00001f66  89e5					  movl		  %esp,%ebp
+	+4	00001f68  83e4f0				  andl		  $0xf0,%esp
+	+7	00001f6b  83ec10				  subl		  $0x10,%esp
+   +10	00001f6e  8b5d04				  movl		  0x04(%ebp),%ebx
+   +13	00001f71  895c2400				  movl		  %ebx,0x00(%esp)
+   +17	00001f75  8d4d08				  leal		  0x08(%ebp),%ecx
+   +20	00001f78  894c2404				  movl		  %ecx,0x04(%esp)
+   +24	00001f7c  83c301				  addl		  $0x01,%ebx
+   +27	00001f7f  c1e302				  shll		  $0x02,%ebx
+   +30	00001f82  01cb					  addl		  %ecx,%ebx
+   +32	00001f84  895c2408				  movl		  %ebx,0x08(%esp)
+
+   +36	00001f88  8b03					  movl		  (%ebx),%eax
+   +38	00001f8a  83c304				  addl		  $0x04,%ebx
+   +41	00001f8d  85c0					  testl		  %eax,%eax
+   +43	00001f8f  75f7					  jne		  0x00001f88
+
+   +45	00001f91  895c240c				  movl		  %ebx,0x0c(%esp)
+   +49	00001f95  e82c000000			  calll		  _main
+   +54	00001f9a  89442400				  movl		  %eax,0x00(%esp)
+   +58	00001f9e  e85d100000			  calll		  0x00003000				    _exit
+   +63	00001fa3  f4					  hlt
+
+dyld_stub_binding_helper:
+	+0	00001fa4  e800000000			  calll		  0x00001fa9
+	+5	00001fa9  58					  popl		  %eax
+	+6	00001faa  ffb067000000			  pushl		  0x00000067(%eax)
+   +12	00001fb0  8b806b000000			  movl		  0x0000006b(%eax),%eax
+   +18	00001fb6  ffe0					  jmp		  *%eax
+
+__dyld_func_lookup:
+	+0	00001fb8  e800000000			  calll		  0x00001fbd
+	+5	00001fbd  58					  popl		  %eax
+	+6	00001fbe  8b805b000000			  movl		  0x0000005b(%eax),%eax
+   +12	00001fc4  ffe0					  jmp		  *%eax
+
+_main:
+	+0	00001fc6  55					  pushl		  %ebp
+	+1	00001fc7  89e5					  movl		  %esp,%ebp
+	+3	00001fc9  83ec18				  subl		  $0x18,%esp
+	+6	00001fcc  8b450c				  movl		  0x0c(%ebp),%eax
+	+9	00001fcf  83c004				  addl		  $0x04,%eax
+   +12	00001fd2  8b00					  movl		  (%eax),%eax
+   +14	00001fd4  890424				  movl		  %eax,(%esp)
+   +17	00001fd7  e802000000			  calll		  _smash
+   +22	00001fdc  c9					  leave
+   +23	00001fdd  c3					  ret
+
+_smash:
+	+0	00001fde  55					  pushl		  %ebp
+	+1	00001fdf  89e5					  movl		  %esp,%ebp
+	+3	00001fe1  81ec18040000			  subl		  $0x00000418,%esp
+	+9	00001fe7  8b4508				  movl		  0x08(%ebp),%eax
+   +12	00001fea  89442404				  movl		  %eax,0x04(%esp)
+   +16	00001fee  8d85f8fbffff			  leal		  0xfffffbf8(%ebp),%eax
+   +22	00001ff4  890424				  movl		  %eax,(%esp)
+   +25	00001ff7  e809100000			  calll		  0x00003005				    _strcpy
+   +30	00001ffc  c9					  leave
+   +31	00001ffd  c3					  ret
+
+(__DATA,__data) section
+00002000 | 00000000 00000000 00000000 00000000  ................
+00002010 | 00100000                             ....
