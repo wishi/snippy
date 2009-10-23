@@ -21,13 +21,13 @@ from idaapi import *
 
 danger_funcs = ["strcpy", "sprintf", "memcpy"] # add more
 
-for funcs in danger_funcs:
+for func in danger_funcs:
    addr = LocByName( func )
    if addr != BADADDR:
       cross_refs = CodeRefsTo( addr, 0 )
       # grab cross-references to this address
       print "Cross References to %s" %func
-      print "---------------------­------"
+      print "----------------------------"
       for ref in cross_refs:
          print "%08x" %ref
          # color the call red
