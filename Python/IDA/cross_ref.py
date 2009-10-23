@@ -13,6 +13,7 @@ trivial.
 - depending on your target you can go after MS SDL baned functions
 (http://msdn.microsoft.com/en-us/library/bb288454.aspx)
 - tested against macho and PE on MacOS and Windows
+  will only work if functions names can be resolved ;)
 
 -- wishi
 """
@@ -31,6 +32,6 @@ for func in danger_funcs:
       for ref in cross_refs:
          print "%08x" %ref
          # color the call red
-         SetColor( ref, CIC_ITEM, 0x0000ff)
+         # SetColor( ref, CIC_ITEM, 0x0000ff)
 
 
