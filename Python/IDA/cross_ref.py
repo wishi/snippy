@@ -8,19 +8,18 @@ finds potencially vulnerable functions in binaries
    * Python >= 2.5
 
 - cross_ref is by Justin Seitz from Gray Hat Python. 
-All changes made a fairly
-trivial. 
+All changes made a fairly trivial ;)  
 - depending on your target you can go after MS SDL baned functions
 (http://msdn.microsoft.com/en-us/library/bb288454.aspx)
-- tested against macho and PE on MacOS and Windows
-  will only work if functions names can be resolved ;)
+- tested against Macho and PE on MacOS and Windoh
+  will only work if functions names can be resolved -> FLIRT
 
 -- wishi
 """
 
 from idaapi import *
 
-danger_funcs = ["strcpy", "sprintf", "memcpy"] # add more
+danger_funcs = ["_strcpy", "_sprintf", "_memcpy"] # add more depending on your read
 
 for func in danger_funcs:
    addr = LocByName( func )
@@ -32,6 +31,6 @@ for func in danger_funcs:
       for ref in cross_refs:
          print "%08x" %ref
          # color the call red
-         # SetColor( ref, CIC_ITEM, 0x0000ff)
+         SetColor( ref, CIC_ITEM, 0x0000ff)
 
 
