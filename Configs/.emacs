@@ -188,61 +188,7 @@ instead."
               (kill-buffer buffer)))
           (buffer-list))))
 
-;; (defun fix-backspace ()
-;;   "Map control-h to work as backspace"
-;;   (interactive)
-;;   (keyboard-translate ?\C-h ?\C-?)
-;;   (global-set-key [(hyper h)] 'help-command))
-
-;; (defun mt-switch-dictionarry()
-;;   (interactive)
-;;   (let* ((dic (if (boundp 'ispell-local-dictionary) ispell-local-dictionary ispell-dictionary))
-;;          (change (if (string= dic "german8") "english" "german8")))
-;;     (set (make-local-variable 'ispell-local-dictionary) change)
-;;     (message "Dictionary switched to %s" change)
-;;     ))
-
-(defun mt-transpose-windows (arg)
-  "Transpose the buffers shown in two windows."
-  (interactive "p")
-  (let ((selector (if (>= arg 0) 'next-window 'previous-window)))
-    (while (/= arg 0)
-      (let ((this-win (window-buffer))
-            (next-win (window-buffer (funcall selector))))
-        (set-window-buffer (selected-window) next-win)
-        (set-window-buffer (funcall selector) this-win)
-        (select-window (funcall selector)))
-      (setq arg (if (plusp arg) (1- arg) (1+ arg))))))
-
-
-(defun mt-mail-mail-setup ()
-  (turn-on-auto-fill)
-  (set-fill-column 66)
-  (flyspell-mode 1)
-  (bs-config-clear)
-  (add-hook 'mew-init-hook 'bbdb-insinuate-mew)
-  (setq bs-default-configuration "mail")
-  (ispell-change-dictionary "german8")
-  (mapc
-   (lambda (mapping) 
-     (apply #'define-key mew-draft-mode-map mapping))
-   `(
-     (,(kbd "C-c i") mt-quoted-insert-file)
-     )))
-
-(add-hook 'mew-draft-mode-hook 'mt-mail-mail-setup)
-
-;; awesome: open en eshell here
-(defun mt-eshell-here ()
-  "Run eshell in the current directory."
-  (interactive)
-  (let ((dir default-directory))
-    (eshell)
-    (unless (string= default-directory dir)
-      (message "Switching to %s" dir)
-      (eshell/cd (list dir))
-      (eshell-emit-prompt))))
-
+;; helper function
 ;; lists all lines where a regex occures ;)
 (defun mt-occur (&optional arg)
   "Switch to *Occur* buffer, or run `occur'.
@@ -267,7 +213,7 @@ set to that number."
   (mt-turn-on-show-trailing-whitespace)
   (auto-fill-mode 1))
 
-;; w3m and emacs 23 aren't friends jet
+;; w3m and emacs 23 aren't friends jet (non CVS version)
 ;; (add-to-list ‘w3m-command-environment ‘(“GC_NPROCS” . “1”))
 ;;(require 'w3m-e21)
 ;; (provide 'w3m-e23)
@@ -292,40 +238,6 @@ set to that number."
      (,(kbd "<left>") backward-char)
      (,(kbd "C-x b") ido-switch-buffer))))
 
-;; (defun mt-rcirc-setup ()
-;;   "Setup a rcirc buffer."
-;;   (flyspell-mode 1)
-;;   (unicode-helper-mode 1)
-;;   (rcirc-track-minor-mode 1)
-;;   (size-indication-mode -1)
-;;   (line-number-mode -1)
-;;   (size-indication-mode -1)
-;;   (display-time-mode -1)
-;;   (abbrev-mode 1)
-;;   (bs-config-clear)
-;;   (setq bs-default-configuration "rcirc")
-;;   (set (make-local-variable 'scroll-conservatively) 8192)
-;;   (setq local-abbrev-table mt-rcirc-mode-abbrev-table)
-;;   (setq rcirc-fill-column 60)
-;;   (set (make-local-variable 'rcirc-fill-prefix) "           ")
-;;   (mapc
-;;    (lambda (mapping) 
-;;      (apply #'define-key rcirc-mode-map mapping))
-;;    `(
-;;      (,(kbd "M-q") rcirc-unfill)
-;;      (,(kbd "C-x x") mt-ruby-xmp-region)
-;;      )))
-
-
-(defun mt-newsticker-setup ()
-  "Setup a newsticker buffer."
-  (setq newsticker-automatically-mark-items-as-old t)
-  (setq newsticker-automatically-mark-visited-items-as-old t)
-  (setq newsticker-hide-old-items-in-newsticker-buffer t)
-  (setq newsticker-retrieval-interval 600)
-  (setq newsticker--auto-narrow-to-item nil)
-  (setq newsticker--auto-narrow-to-feed nil)
-  )
 
 ;; Dylan mode config
 (defun mt-dylan-setup ()
@@ -358,6 +270,25 @@ set to that number."
   (setq comment-padding " ")
   (setq comment-start "--"))
 
+(add-to-list 'auto-mode-alist '("\\.[hg]s$"   . haskell-mode))
+(add-to-list 'auto-mode-alist '("\\.hi$"      . haskell-mode))
+(add-to-list 'auto-mode-alist '("\\.l[hg]s$"  . literate-haskell-mode))
+(autoload 'haskell-mode "haskell-mode"
+  "Major mode for editing Haskell scripts" t)
+(autoload 'literate-haskell-mode "haskell-mode"
+  "Major mode for editing literate Haskell scripts" t)
+(autoload 'run-ghci "haskell-ghci"
+  "Go to the *ghci* buffer" t nil)
+;;(set-variable 'haskell-program-name "ghci")
+(defalias 'run-haskell (quote switch-to-haskell))
+(autoload (quote switch-to-haskell) "inf-haskell"
+  "Show the inferior-haskell buffer.  Start the process if needed." t nil)
+
+(add-hook 'haskell-mode-hook 'mt-haskell-setup)
+
+
+(autoload 'highlight-parentheses-mode "highlight-parentheses"
+  "highlight parentheses mode" t)
 
 (add-to-list 'filladapt-token-table '("-- " haskell-comment))
 (add-to-list 'filladapt-token-match-table '(haskell-comment haskell-comment))
@@ -377,7 +308,7 @@ set to that number."
    `((,(kbd "RET") newline-and-indent)
      )))
 
-;; Python mode config
+;; Python mode config - needs some work to work ;)
 ;; setq load-path
 ;;      (append (list nil	"~/.emacs.d/ipython"
 ;;		                 	)
@@ -391,9 +322,14 @@ set to that number."
 
 ;; ipython instead of standard interpreter shell
 ;; (setq ipython-completion-command-string "print(';'.join(__IP.Completer.all_completions('%s')))\n")
+;; afaik the python mode completions are deprecated
 
+;; hown - for project notes
+(add-to-list 'load-path "/opt/local/share/emacs/site-lisp/howm")
+;; (add-to-list 'load-path "~/.emacs.d/hown/howm-1.3.6")
+(require 'howm)
 
-;; howm is a great note utility
+;; - helps to keep notes about projects
 (defun mt-howmc-setup ()
   ;; (mapc
   ;;  (lambda (mapping)
@@ -536,7 +472,6 @@ When called with a prefix argument, show the *trace-output* buffer."
     (recenter -12)
     (pop-to-buffer buffer)))
 
-
 (defun isearch-backward-current-symbol (&optional partialp)
   "Incremental search backward with symbol under point.
   
@@ -547,29 +482,8 @@ When called with a prefix argument, show the *trace-output* buffer."
     (isearch-backward-regexp nil 1)
     (isearch-yank-symbol partialp)))
 
-;; 10.12.2001; xsteve
-;; 17.03.2008; Michael 'mictro' Trommer <mictro@gmail.com>, Nato (international code)
-(setq nato-alphabet
-'(("A" . "Alfa") ("B" . "Bravo") ("C" . "Charlie") ("D" . "Delta") ("E" . "Echo")
-  ("F" . "Foxtrot") ("G" . "Golf") ("H" . "Hotel") ("I" . "India") ("J" . "Juliet")
-  ("K" . "Kilo") ("L" . "Lima") ("M" . "Mike") ("N" . "November") ("O" . "Oscar")
-  ("P" . "Papa") ("Q" . "Quebec") ("R" . "Romeo") ("S" . "Sierra") ("T" . "Tango")
-  ("U" . "Uniform") ("V" . "Victor") ("W" . "Whiskey") ("X" . "Xray")
-  ("Y" . "Yankee") ("Z" . "Zulu") ("1" . "One") ("2" . "Two") ("3" . "Three") 
-  ("4" . "Four") ("5" . "Five") ("6" . "Six") ("7" . "Seven") ("8" . "Eight")
-  ("9" . "Nine") ("0" . "Zero") (" " . "_")))
 
-;; 10.12.2001; xsteve
-;; 17.03.2008; Michael 'mictro' Trommer <mictro@gmail.com>, use region
-(defun nato-on-region (beg end)
-  (interactive "r")
-  (insert 
-   (format "%s" 
-           (mapcar (lambda (ch)
-                     (cdr (assoc (char-to-string ch) nato-alphabet))) (upcase (buffer-substring beg end)))))
-  (kill-region beg end))
-
-
+;; just a signature inersert - help function
 (defun mt-insert-signature ()
   (interactive)
   (insert (shell-command-to-string "mksig")))
@@ -812,6 +726,8 @@ two prefix arguments, write out the day and month name."
 ;;   (interactive (browse-url-interactive-arg "URL: "))
 ;;   (shell-command-to-string (concat "btab '" url "'" )))
 
+
+;; getting rfc text
 (defun rfc (num)
   "Show RFC NUM in a buffer."
   (interactive "nRFC (0 for index): ")
@@ -866,6 +782,10 @@ two prefix arguments, write out the day and month name."
 ;; strict one frame, many buffers
 (one-buffer-one-frame-mode 0)
 
+;; java mode completion hook
+;; (add-to-list 'load-path "~/.emacs.d/java")
+;; (add-hook 'java-mode-hook (lambda () (local-set-key (kbd "C-<tab>") 'java-complete)))
+
 ;; w3m stuff 
 (add-to-list 'exec-path "/opt/local/bin")
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp/w3m")
@@ -895,27 +815,20 @@ two prefix arguments, write out the day and month name."
           '(lambda ()  
          (define-key minibuffer-local-map "\t" 'comint-dynamic-complete)))
 
-
 ;; Toolbar futschen
 (tool-bar-mode nil)
 
 ;; Generally neat for editing tables
 (require 'table)
 
-;; Functions for open functions
-(defun open-finder-here ()
-  (interactive)
-  (shell-command "open ."))
-(defun open-file-in-mac ()
-  (interactive)
-  (shell-command
-   (concat "open " (buffer-file-name))))
+
 
 ;; Set a narrow and blinking cursor
 (blink-cursor-mode t)
 (setq-default cursor-type '(bar . 2))
 
-;; VIPER Bug:
+
+;; VIPER Bug circumvention
 (when (featurep 'aquamacs)
    (raise-frame))
  (setq viper-mode t)
@@ -935,14 +848,19 @@ two prefix arguments, write out the day and month name."
 (line-number-mode 1) 
 ;; this is not linum
 
-;; mutt wants this if used as an editor
-; no backups
-(setq make-backup-files nil) 
-
 ;; UTF8 terminal fix
 (set-terminal-coding-system 'utf-8)
    (set-keyboard-coding-system 'utf-8)
    (prefer-coding-system 'utf-8)
+
+;; Functions for open functions
+(defun open-finder-here ()
+  (interactive)
+  (shell-command "open ."))
+(defun open-file-in-mac ()
+  (interactive)
+  (shell-command
+   (concat "open " (buffer-file-name))))
 
 ;; Terminal.app Applescript hack
  (defun mac-open-terminal ()
@@ -971,6 +889,7 @@ two prefix arguments, write out the day and month name."
 (autoload 'company-mode "company" nil t)
 (setq company-begin-commands '(self-insert-command))
 
+;; company mode actually seems to be preferable
 ;; completion ui
 ;; (add-to-list 'load-path "~/.emacs.d/completion-ui")
 ;; (require 'completion-ui)
@@ -996,6 +915,17 @@ two prefix arguments, write out the day and month name."
   ;;            (dabbrev-expand nil)
   ;;          (indent-for-tab-command)))))
 
+
+;; @BUGGY
+;; cedet mode
+;; (load-file "~/.emacs.d/cedet/cedet-1.0pre6/common/cedet.el")
+;; (require 'semantic-ia)
+;; (require 'semantic-gcc)
+;; (global-ede-mode t)                      ; Enable the Project management system
+;; (semantic-load-enable-minimum-features)  ; Enable prototype help and smart completion 
+;; (global-srecode-minor-mode 1)            ; Enable template insertion menu
+
+
 ;; spell check display hack -- by wishi ;)
 (defun faces_x ()
   (custom-set-faces
@@ -1003,11 +933,13 @@ two prefix arguments, write out the day and month name."
 '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
 ))
 
+;; LaTeX mode config
 ;; .tex files are managed in LaTeX + reftex + autofill modes
 (setq auto-mode-alist (cons '("\\.tex$" . LaTeX-mode) auto-mode-alist)) 
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
+
 
 ;; Flyspell
 ;;  (defcustom flyspell-before-incorrect-word-string nil
@@ -1044,24 +976,7 @@ two prefix arguments, write out the day and month name."
 ;;       flyspell-overlay))
 
 
-;; Mailstuff
-(expand-file-name "~/.authinfo")
-
-;; GMAIL
-(setq send-mail-function 'smtpmail-send-it
-      message-send-mail-function 'smtpmail-send-it
-      smtpmail-starttls-credentials
-      '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-auth-credentials
-      '(("smtp.gmail.com" 587 "marius.ciepluch@gmail.com" nil))
-      smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-service 587
-      smtpmail-debug-info t)
-(require 'smtpmail)
-
-;; company mode
-;; company-mode requires Emacs 22.
+;; company-mode requires Emacs 23 afaik
 (require 'company-mode)
 (require 'company-bundled-completions)
 (company-install-bundled-completions-rules)
@@ -1069,41 +984,34 @@ two prefix arguments, write out the day and month name."
 (add-to-list 'load-path "/opt/local/share/emacs/site-lisp/g-client")
 (load-library "g")
 
-;; TRAMP mode
-;; /usr/local/info
-;; (add-to-list 'load-path " /usr/local/info")
+;; TRAMP mode for edting through I/O ssh
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
-;; hown - for notes
-(add-to-list 'load-path "/opt/local/share/emacs/site-lisp/howm")
-;; (add-to-list 'load-path "~/.emacs.d/hown/howm-1.3.6")
-(require 'howm)
-
-;; Source Indent
+;; Source Indent for C/C++
 (add-hook 'c++-mode-hook 'my-set-newline-and-indent)
 (add-hook 'c-mode-hook 'my-set-newline-and-indent)
 
-;; Tabkey2
-;; (add-to-list 'load-path ".emacs.d/tabkey2")
-;; (require 'tabkey2)
 
-;;; Haskell
-(add-to-list 'auto-mode-alist '("\\.[hg]s$"   . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.hi$"      . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.l[hg]s$"  . literate-haskell-mode))
-(autoload 'haskell-mode "haskell-mode"
-  "Major mode for editing Haskell scripts" t)
-(autoload 'literate-haskell-mode "haskell-mode"
-  "Major mode for editing literate Haskell scripts" t)
-(autoload 'run-ghci "haskell-ghci"
-  "Go to the *ghci* buffer" t nil)
-;;(set-variable 'haskell-program-name "ghci")
-(defalias 'run-haskell (quote switch-to-haskell))
-(autoload (quote switch-to-haskell) "inf-haskell"
-  "Show the inferior-haskell buffer.  Start the process if needed." t nil)
+;; funstuff
+;; 10.12.2001; xsteve
+;; 17.03.2008; Michael 'mictro' Trommer <mictro@gmail.com>, Nato (international code)
+(setq nato-alphabet
+'(("A" . "Alfa") ("B" . "Bravo") ("C" . "Charlie") ("D" . "Delta") ("E" . "Echo")
+  ("F" . "Foxtrot") ("G" . "Golf") ("H" . "Hotel") ("I" . "India") ("J" . "Juliet")
+  ("K" . "Kilo") ("L" . "Lima") ("M" . "Mike") ("N" . "November") ("O" . "Oscar")
+  ("P" . "Papa") ("Q" . "Quebec") ("R" . "Romeo") ("S" . "Sierra") ("T" . "Tango")
+  ("U" . "Uniform") ("V" . "Victor") ("W" . "Whiskey") ("X" . "Xray")
+  ("Y" . "Yankee") ("Z" . "Zulu") ("1" . "One") ("2" . "Two") ("3" . "Three") 
+  ("4" . "Four") ("5" . "Five") ("6" . "Six") ("7" . "Seven") ("8" . "Eight")
+  ("9" . "Nine") ("0" . "Zero") (" " . "_")))
 
-(add-hook 'haskell-mode-hook 'mt-haskell-setup)
-
-(autoload 'highlight-parentheses-mode "highlight-parentheses"
-  "highlight parentheses mode" t)
+;; 10.12.2001; xsteve
+;; 17.03.2008; Michael 'mictro' Trommer <mictro@gmail.com>, use region
+(defun nato-on-region (beg end)
+  (interactive "r")
+  (insert 
+   (format "%s" 
+           (mapcar (lambda (ch)
+                     (cdr (assoc (char-to-string ch) nato-alphabet))) (upcase (buffer-substring beg end)))))
+  (kill-region beg end))
