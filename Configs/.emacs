@@ -290,9 +290,9 @@ set to that number."
 (autoload 'highlight-parentheses-mode "highlight-parentheses"
   "highlight parentheses mode" t)
 
-(add-to-list 'filladapt-token-table '("-- " haskell-comment))
-(add-to-list 'filladapt-token-match-table '(haskell-comment haskell-comment))
-(add-to-list 'filladapt-token-conversion-table '(haskell-comment . exact))
+;; (add-to-list 'filladapt-token-table '("-- " haskell-comment))
+;; (add-to-list 'filladapt-token-match-table '(haskell-comment haskell-comment))
+;; (add-to-list 'filladapt-token-conversion-table '(haskell-comment . exact))
 
 (defun mt-sass-setup ()
   (mapc
@@ -308,6 +308,23 @@ set to that number."
    `((,(kbd "RET") newline-and-indent)
      )))
 
+(add-to-list 'load-path "~/.emacs.d/ipython/")
+(add-to-list 'load-path "/Library/Python/2.5/site-packages/")
+
+(setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
+(setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
+(autoload 'python-mode "python-mode" "Python editing mode." t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(require 'pycomplete)
+(setq ipython-command "/Volumes/MacOS_10.4/opt/local/bin/ipython2.5")
+(require 'ipython)
+
+
+
+
 ;; Python mode config - needs some work to work ;)
 ;; setq load-path
 ;;      (append (list nil	"~/.emacs.d/ipython"
@@ -321,7 +338,7 @@ set to that number."
 ;; (pymacs-load "ropemacs" "rope-")
 
 ;; ipython instead of standard interpreter shell
-;; (setq ipython-completion-command-string "print(';'.join(__IP.Completer.all_completions('%s')))\n")
+(setq ipython-completion-command-string "print(';'.join(__IP.Completer.all_completions('%s')))\n")
 ;; afaik the python mode completions are deprecated
 
 ;; hown - for project notes
@@ -780,7 +797,7 @@ two prefix arguments, write out the day and month name."
 (modify-frame-parameters (selected-frame) '((alpha . 98)))
 
 ;; strict one frame, many buffers
-(one-buffer-one-frame-mode 0)
+;; (one-buffer-one-frame-mode 0)
 
 ;; java mode completion hook
 ;; (add-to-list 'load-path "~/.emacs.d/java")
@@ -816,7 +833,7 @@ two prefix arguments, write out the day and month name."
          (define-key minibuffer-local-map "\t" 'comint-dynamic-complete)))
 
 ;; Toolbar futschen
-(tool-bar-mode nil)
+;; (tool-bar-mode nil)
 
 ;; Generally neat for editing tables
 (require 'table)
@@ -898,22 +915,22 @@ two prefix arguments, write out the day and month name."
 
 
 ;; Tab completion
-  ;; (global-set-key [(tab)] 'smart-tab)
-  ;; (defun smart-tab ()
-  ;;   "This smart tab is minibuffer compliant: it acts as usual in
-  ;;     the minibuffer. Else, if mark is active, indents region. Else if
-  ;;     point is at the end of a symbol, expands it. Else indents the
-  ;;     current line."
-  ;;   (interactive)
-  ;;    (if (minibufferp)
-  ;;        (unless (minibuffer-complete)
-  ;;          (dabbrev-expand nil))
-  ;;      (if mark-active
-  ;;          (indent-region (region-beginning)
-  ;;                         (region-end))
-  ;;        (if (looking-at "\\_>")
-  ;;            (dabbrev-expand nil)
-  ;;          (indent-for-tab-command)))))
+   (global-set-key [(tab)] 'smart-tab)
+  	(defun smart-tab ()
+  	   "This smart tab is minibuffer compliant: it acts as usual in
+  	     the minibuffer. Else, if mark is active, indents region. Else if
+  	     point is at the end of a symbol, expands it. Else indents the
+  	     current line."
+  	   (interactive)
+  	    (if (minibufferp)
+  	        (unless (minibuffer-complete)
+  	          (dabbrev-expand nil))
+  	      (if mark-active
+  	          (indent-region (region-beginning)
+  	                         (region-end))
+  	        (if (looking-at "\\_>")
+  	            (dabbrev-expand nil)
+  	          (indent-for-tab-command)))))
 
 
 ;; @BUGGY
@@ -991,6 +1008,13 @@ two prefix arguments, write out the day and month name."
 ;; Source Indent for C/C++
 (add-hook 'c++-mode-hook 'my-set-newline-and-indent)
 (add-hook 'c-mode-hook 'my-set-newline-and-indent)
+
+
+
+
+
+
+
 
 
 ;; funstuff
