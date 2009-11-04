@@ -6,7 +6,7 @@ just some base conversions
 """
 
 def useage():
-    print "-c             Base-converts Integer values. Automatically: 0x - hex, 0 - oct."
+    print "-c             Base-converts Integer values. Automatically: 0x - hex, 0 - oct..."
     print "-d2h           decimal to hexadecimal"
     print "-d2o           decimal to octal"
     print "-d2b           decimal to binary"
@@ -29,20 +29,35 @@ def hex_to_dec(aString):
 def oct_to_dec(aString):
     return int (aString, 8)
 
+def bin_to_dec(aString):
+    return int (aString, 2)
+
 if __name__ == '__main__':
     import sys
-
+    import getopt # @TODO
+            
+    
     input = sys.argv[2]
     print "In        " + input
     
-    # in this case we're dealing with hex
-    if ( input.startswith("0x") or input.startswith("0X") ):
-        print hex_to_dec(input)
-    elif ( input.startswith("0") ):
-        print oct_to_dec(input)
-    else:
-        dec_to_hex(int(input))       
+    """
+    0x, 0, 0b - hex, oct, bin
+    default is to decimal
+    """
+    if sys.argv[1]=="-c":
+        if ( input.startswith("0x") or input.startswith("0X") ):
+            print hex_to_dec(input)
+        elif ( input.startswith("0") ):
+            print oct_to_dec(input)
+        elif ( input.startswith("0b") ):
+            print bin_to_dec(input)
+     
+    if sys.argv[1]=="-d2h":
+        dec_to_hex(int(input))
     
+    if sys.argv[1]=="-d2o":
+        
+        
    
     
    
