@@ -1,0 +1,36 @@
+functional concepts in C# and F#
+
+1 delegates
+
+see:
+
+C#
+
+* simple static method with delegate
+
+static int AggregateNumbers(int initial, Func<int, int, int> op, int from, int to)
+{
+	if (from > to)
+		return initial;
+	else
+		return op(from, AggregateNumbers(initial, op, from + 1, to));
+}
+
+vs.
+
+F#
+
+* op -> delegate
+
+let rec aggregateNumbers initial op nfrom nto =   
+  if (nfrom > nto) then initial
+  else op nfrom (aggregateNumbers initial op (nfrom + 1) nto)
+
+
+* rec -> needed for recursive loops instead of just let
+* lambda syntax in F#: aggregateNumbers 0 (fun a b -> a + b) 1 5
+                       aggregateNumbers 1 (fun a b -> a * b) 1 5
+                       
+                       vs.
+                       
+                       aggregateNumbers 0 (+) 1 5 // we don't need to write lambda functions 
