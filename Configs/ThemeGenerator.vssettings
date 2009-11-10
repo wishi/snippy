@@ -1,0 +1,93 @@
+
+
+
+<UserSettings>
+	<ApplicationIdentity version="8.0"/>
+	<ToolsOptions>
+		<ToolsOptionsCategory name="Environment" RegisteredName="Environment"/>
+	</ToolsOptions>
+	<Category name="Environment_Group" RegisteredName="Environment_Group">
+		<Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-810E-7FD247D0DA1D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_FontsAndColors" PackageName="Visual Studio Environment Package">
+			<PropertyValue name="Version">2</PropertyValue>
+			<FontsAndColors Version="2.0">
+				<Categories>
+					<Category GUID="{5C48B2CB-0366-4FBF-9786-0BB37E945687}" FontName="PalmOS" FontSize="8" CharSet="0" FontIsDefault="No">
+						<Items>
+							<Item Name="Plain Text" Foreground="0x0000FF00" Background="0x00003700" BoldFont="No"/>
+							<Item Name="Selected Text" Foreground="0x00003700" Background="0x0000FF00" BoldFont="No"/>
+							<Item Name="Inactive Selected Text" Foreground="0x00003700" Background="0x00009100" BoldFont="No"/>
+							<Item Name="Current list location" Foreground="0x00A3DBFF" Background="0x01000007" BoldFont="No"/>
+						</Items>
+					</Category>
+					<Category GUID="{9973EFDF-317D-431C-8BC1-5E88CBFD4F7F}" FontName="PalmOS" FontSize="8" CharSet="0" FontIsDefault="No">
+						<Items>
+							<Item Name="Plain Text" Foreground="0x0057C732" Background="0x0017340E" BoldFont="No"/>
+							<Item Name="Selected Text" Foreground="0x00003700" Background="0x0000FF00" BoldFont="No"/>
+							<Item Name="Inactive Selected Text" Foreground="0x00003700" Background="0x00009100" BoldFont="No"/>
+							<Item Name="Current list location" Foreground="0x00A3DBFF" Background="0x01000007" BoldFont="No"/>
+						</Items>
+					</Category>
+					<Category GUID="{A27B4E24-A735-4D1D-B8E7-9716E1E3D8E0}" FontName="Monaco" FontSize="9" CharSet="0" FontIsDefault="No">
+						<Items>
+						    
+							<Item Name="Plain Text" Foreground="00CFCFCF" Background="00362B32" BoldFont="No"/>
+							<Item Name="Indicator Margin" Foreground="0x02000000" Background="00362B32" BoldFont="No"/>
+							<Item Name="Line Numbers" Foreground="00828282" Background="00362B32" BoldFont="No"/>
+							<Item Name="Visible White Space" Foreground="0x00808080" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Compiler Error" Foreground="000000F0" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS Keyword" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS Property Name" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS Property Value" Foreground="00FE472F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS Selector" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="CSS String Value" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="HTML Attribute" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="HTML Attribute Value" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="HTML Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="HTML Element Name" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="HTML Operator" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Identifier" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Keyword" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Number" Foreground="002FA7FE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Operator" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Preprocessor Keyword" Foreground="00FEC72F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Stale Code" Foreground="0x00808080" Background="0x00C0C0C0" BoldFont="No"/>
+							<Item Name="String" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="String (C# @ Verbatim)" Foreground="00FEC72F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Task List Shortcut" Foreground="0x00FFFFFF" Background="0x02C0C0C0" BoldFont="No"/>
+							<Item Name="User Keywords" Foreground="00FE472F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="User Types" Foreground="00DF5F4E" Background="0x02000000" BoldFont="No"/>
+							<Item Name="Warning" Foreground="000000F0" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Attribute" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Attribute Quotes" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Attribute Value" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Delimiter" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Keyword" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Markup Extension Class" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Markup Extension Parameter Name" Foreground="00FE472F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Markup Extension Parameter Value" Foreground="00DF5F4E" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Name" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Processing Instruction" Foreground="00FEC72F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XAML Text" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>							
+							<Item Name="XML Attribute" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Attribute Quotes" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Attribute Value" Foreground="002FDBFE" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Delimiter" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Doc Attribute" Foreground="00DF5F4E" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Doc Comment" Foreground="00828282" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Doc Tag" Foreground="00DF5F4E" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Keyword" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Name" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Processing Instruction" Foreground="0x0015496C" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XML Text" Foreground="00CFCFCF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="XSLT Keyword" Foreground="0039FE2F" Background="0x02000000" BoldFont="No"/>																	
+						</Items>
+					</Category>
+				</Categories>
+			</FontsAndColors>
+		</Category>
+	</Category>
+</UserSettings>
