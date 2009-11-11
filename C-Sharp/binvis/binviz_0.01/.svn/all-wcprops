@@ -1,0 +1,461 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/12/trunk/binviz_0.01
+END
+FrmRGBPlot.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmRGBPlot.cs
+END
+FrmBitPlot.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBitPlot.cs
+END
+frmAttractor.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/frmAttractor.resx
+END
+FrmPresence.resx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmPresence.resx
+END
+FrmText.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmText.Designer.cs
+END
+FrmDotPlot.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmDotPlot.Designer.cs
+END
+binviz_0.05.sln
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/15/trunk/binviz_0.01/binviz_0.05.sln
+END
+binviz_0.05.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/15/trunk/binviz_0.01/binviz_0.05.csproj
+END
+FrmMain.resources
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMain.resources
+END
+FrmStats.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStats.Designer.cs
+END
+FrmAddFilter.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmAddFilter.Designer.cs
+END
+FrmProgressBar.resources
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmProgressBar.resources
+END
+FrmFrequency.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmFrequency.cs
+END
+FrmEncode.resources
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmEncode.resources
+END
+FrmPresence.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmPresence.cs
+END
+FrmMemoryMap.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMemoryMap.Designer.cs
+END
+FrmProgressBar.resx
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmProgressBar.resx
+END
+binviz_0.05.pidb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/15/trunk/binviz_0.01/binviz_0.05.pidb
+END
+FrmEncode.resx
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmEncode.resx
+END
+FrmAddFilter.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmAddFilter.resx
+END
+FrmStats.resx
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStats.resx
+END
+FrmRGBPlot.resources
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmRGBPlot.resources
+END
+FrmMemoryMap.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMemoryMap.resx
+END
+FrmBitPlot.resources
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBitPlot.resources
+END
+FrmRGBPlot.resx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmRGBPlot.resx
+END
+FrmProgressBar.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmProgressBar.Designer.cs
+END
+FrmStrings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStrings.cs
+END
+FrmText.resources
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmText.resources
+END
+FrmBitPlot.resx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBitPlot.resx
+END
+FrmNavigator.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmNavigator.Designer.cs
+END
+FrmByteCloud.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmByteCloud.Designer.cs
+END
+Pakete.mdproj
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/15/trunk/binviz_0.01/Pakete.mdproj
+END
+FrmEncode.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmEncode.Designer.cs
+END
+binviz_0.05.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/trunk/binviz_0.01/binviz_0.05.tar.gz
+END
+FrmStats.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStats.cs
+END
+FrmAddFilter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmAddFilter.cs
+END
+FrmMain.resx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMain.resx
+END
+FrmBytePlot.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBytePlot.Designer.cs
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/15/trunk/binviz_0.01/Program.cs
+END
+FrmPresence.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmPresence.Designer.cs
+END
+FrmAddFilter.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmAddFilter.resources
+END
+FrmStats.resources
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStats.resources
+END
+FrmMemoryMap.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMemoryMap.cs
+END
+FrmFrequency.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmFrequency.resources
+END
+FrmNavigator.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmNavigator.resx
+END
+FrmByteCloud.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmByteCloud.resx
+END
+binviz_0.05.userprefs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/binviz_0.01/binviz_0.05.userprefs
+END
+FrmRGBPlot.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmRGBPlot.Designer.cs
+END
+frmAttractor.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/frmAttractor.resources
+END
+FrmMemoryMap.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMemoryMap.resources
+END
+FrmBitPlot.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBitPlot.Designer.cs
+END
+FrmFrequency.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmFrequency.resx
+END
+FrmBytePlot.resx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBytePlot.resx
+END
+FrmMain.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/15/trunk/binviz_0.01/FrmMain.cs
+END
+FrmDotPlot.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmDotPlot.cs
+END
+FrmNavigator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmNavigator.cs
+END
+FrmByteCloud.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmByteCloud.cs
+END
+FrmStrings.resources
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStrings.resources
+END
+FrmByteCloud.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmByteCloud.resources
+END
+FrmNavigator.resources
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmNavigator.resources
+END
+FrmText.resx
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmText.resx
+END
+FrmFrequency.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmFrequency.Designer.cs
+END
+frmAttractor.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/binviz_0.01/frmAttractor.Designer.cs
+END
+FrmBytePlot.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBytePlot.cs
+END
+frmAttractor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/frmAttractor.cs
+END
+FrmStrings.resx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStrings.resx
+END
+FrmBytePlot.resources
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmBytePlot.resources
+END
+FrmPresence.resources
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmPresence.resources
+END
+FrmMain.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmMain.Designer.cs
+END
+FrmText.cs
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmText.cs
+END
+FrmStrings.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmStrings.Designer.cs
+END
+FrmProgressBar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmProgressBar.cs
+END
+FrmDotPlot.resources
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmDotPlot.resources
+END
+FrmEncode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmEncode.cs
+END
+FrmDotPlot.resx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/3/trunk/binviz_0.01/FrmDotPlot.resx
+END
+ProcessMemory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/15/trunk/binviz_0.01/ProcessMemory.cs
+END
