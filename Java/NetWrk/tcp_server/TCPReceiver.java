@@ -79,7 +79,7 @@ public class TCPReceiver {
                         while ((line = in.readObject().toString()) != null) {
                             // Internetadresse bzw. dem Rechnernamen und der Portnummer des Senders
                             if (line.equals(ack)) {
-                                System.out.println("Bestätige mit: " + ack);
+                                System.out.println("Bestaetige mit: " + ack);
                                 os.writeObject(ack);
                                 os.flush();
                             }
