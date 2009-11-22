@@ -59,7 +59,7 @@ public class TCPReceiver {
                 @Override
                 public void run() {
                     
-                    // hier ähnlich wie der EchoClient aus dem letzten Praktikum
+                    // hier aehnlich wie der EchoClient aus dem letzten Praktikum
                     // nur eben in Threads
                     
                     // Ausgabe zum Debug... socket hat eine Methode dafuer
@@ -86,7 +86,7 @@ public class TCPReceiver {
                             
                             System.out.println("Starte: " + socket);
                             System.out.println("Nachricht: " + line);
-                            // System.out.println("Bestätige mit " + ack);
+                            // System.out.println("Bestaetige mit " + ack);
                             os.flush();
                         }
             
