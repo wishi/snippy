@@ -1,25 +1,24 @@
 package tcp_server;
 /**
- * 
+ * @author Marius Ciepluch
+ * Verteilte Systeme Praktikum
+ * Single-threaded client
+ * receives an ACK 
  */
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ConnectException;
 import java.net.NoRouteToHostException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-
-
-/**
- * @author Marius Ciepluch
- * Verteilte Systeme Praktikum
- *
- */
 public class TCPSender {
 
     /**
+     * <EntryPoint>
      * @param argv
      * @throws ClassNotFoundException 
      * @throws IOException 
@@ -28,8 +27,8 @@ public class TCPSender {
              
         
         String server_name = argv.length == 1 ? argv[0] : "localhost";
-        int tcp_port = 8205;                    // gem. Aufgabe 
-        String ack="Ok";
+        final int tcp_port = 8205;                    // Vorgaben
+        String ack="Ok";                        // -> ohne SessionID etc.
         
         Socket echoSocket = null;
         ObjectInputStream in = null;
@@ -43,20 +42,31 @@ public class TCPSender {
             out = new ObjectOutputStream(echoSocket.getOutputStream());
             in = new ObjectInputStream(echoSocket.getInputStream());
             
+            echoSocket.setSoTimeout(100); // 1 sek - DEBUG
+            
             out.flush();
             
-            String message = System.console().readLine();
+            String message="pre"; //  = System.console().readLine();
             
             while(!message.equals("quit")) {
-                                                
-                out.writeObject(message);
-                System.out.println("Sending: " + message);      
+          
+                // <EntryPoint>
+                System.out.print("> ");
                 message = System.console().readLine();
+                out.writeObject(message);
+                System.out.println("Sent: " + message);  
                 out.flush();
                                
-            }
+                String response = in.readObject().toString();
+                if (response.equals(ack)) 
+                    System.out.println("Message ACK from " + server_name + "\n\n");
+                
+            } // -- end of while
             
-                           
+            // out.writeObject(ack);
+                        
+            out.close();
+            in.close();
  
         } catch (UnknownHostException e) {
             System.err.println(server_name + " Unknown host");
@@ -70,16 +80,13 @@ public class TCPSender {
         } catch (java.io.IOException e) {
             System.err.println(server_name + ' ' + e.getMessage());
             return;
-        } 
+        } finally {
+            System.out.println("Bye");
+            echoSocket.close();
+        }
         
-            out.close();
-           
-        
-        
+  
     } // -- end of main 
 
 }
-
-
-
-
+// EOF
