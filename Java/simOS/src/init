@@ -1,0 +1,13 @@
+100
+create_console
+write_val Moin\0020Moin
+write_nl
+write_val >
+read 20
+load 1 20
+load 2 #exit
+jeq 11
+create_process 20
+wait 1
+jmp 3
+quit

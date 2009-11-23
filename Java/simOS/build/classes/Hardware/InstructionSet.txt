@@ -1,0 +1,64 @@
+Overview of the semi-assembler syntax
+
+1.: Instructions for mathematical operations
+    inc (1|2)
+        Increases the value of the specified register by 1
+    dec (1|2)
+        Decreases the value of the specified register by 1
+    add (1|2) <double value>
+        Adds the specified double value to the specified register
+    sub (1|2) <double value>
+    mul (1|2) <double value>
+    div (1|2) <double value>
+        Works like 'add'
+    rand <int value> <int value>
+        Writes a random number in the specified range (incl.) into register 1
+
+2.: Instructions for working with registers and the main memory
+    store (1|2) <address>
+        Stores the content of the specified register into the specified memory cell
+    store #<value> <address>
+        Stores the specified value into the specified memory cell
+    load (1|2) <address>
+        Loads the content of the specified memory cell into the specified register
+    load (1|2) #<value>
+        Loads the specified value into the specified register
+ 
+3.: Jump Instructions
+    jmp <address>
+        Sets the program counter to the specified address
+    jeq <address>
+        Jumps, if register 1 == register 2
+    jne <address>
+        Jumps, if register 1 != register 2
+    jlt <address>
+        Jumps, if register 1 < register 2
+    jgt <address>
+        Jumps, if register 1 > register 2
+
+4.: System calls
+    create_process <address of path string>
+        Creates a new process from the file with path stored at the specified address
+    create_process [<address>]
+        Creates a new process from the file with path stored at the address contained in the specified address
+    get_pid (1|2)
+        Gets the current pid and writes it into the specified register
+    wait <pid>
+        Waits for the termination of the specified process
+    kill
+        N/A
+    quit
+        Terminates the current process
+
+    read <address>
+		  Reads input form the console and writes it into the specified memory cell
+
+    write_reg (1|2)
+        Prints the content of the specified register to standard output
+    write_mem <address>
+        Prints the content of the specified memory cell to standard output
+    write_val <string>
+        Prints the specified string to standard output
+    write_nl
+        Prints a new line to standard output
+

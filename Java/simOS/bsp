@@ -1,0 +1,17 @@
+100
+create_console
+write_val Zahl1>
+read 50
+load 1 50
+load 2 #q
+jeq 15
+write_val Zahl\00202>
+read 51
+load 2 51
+add 1 2
+write_reg 1
+write_nl
+write_val ENTER-Taste\0020drücken
+read 52
+jmp 1
+quit
