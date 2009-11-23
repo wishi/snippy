@@ -16,7 +16,6 @@ import java.net.UnknownHostException;
 
 
 public class TCPSender {
-
     /**
      * <EntryPoint>
      * @param argv
@@ -24,16 +23,15 @@ public class TCPSender {
      * @throws IOException 
      */
     public static void main(String[] argv) throws ClassNotFoundException, IOException {
-             
-        
+
         String server_name = argv.length == 1 ? argv[0] : "localhost";
-        final int tcp_port = 8205;                    // Vorgaben
-        String ack="Ok";                        // -> ohne SessionID etc.
+        final int tcp_port = 8205;                      // Vorgaben
+        String ack="Ok";                                // -> ohne SessionID etc.
         
         Socket echoSocket = null;
         ObjectInputStream in = null;
         ObjectOutputStream out = null;
-                
+
         try {
             echoSocket = new Socket(server_name, tcp_port);
             System.out.println(" *** Connected to " + server_name  + " ***");
@@ -42,7 +40,7 @@ public class TCPSender {
             out = new ObjectOutputStream(echoSocket.getOutputStream());
             in = new ObjectInputStream(echoSocket.getInputStream());
             
-            echoSocket.setSoTimeout(100); // 1 sek - DEBUG
+            echoSocket.setSoTimeout(100); // 1 sek - TODO
             
             out.flush();
             
@@ -82,7 +80,7 @@ public class TCPSender {
             return;
         } finally {
             System.out.println("Bye");
-            echoSocket.close();
+            // echoSocket.close();
         }
         
   
