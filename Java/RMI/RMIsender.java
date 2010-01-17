@@ -12,7 +12,7 @@ import java.rmi.registry.Registry;
  */
 /*
 1.   host 1: java RmiServer
-2.   host 2: (at another host) java RmiClient <serverÕs address> 1099
+2.   host 2: (at another host) java RmiClient <servers address> 1099
 */
 
 public class RMIsender {
