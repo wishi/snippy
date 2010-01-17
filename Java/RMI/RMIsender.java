@@ -29,7 +29,7 @@ public class RMIsender {
                 text = System.console().readLine();
                 System.out.println("Sending " + text + " to " + serverAddress + ":" + serverPort);
 
-                // get the “registry”
+                // get the registry
                 registry = LocateRegistry.getRegistry(serverAddress, (new Integer(serverPort)).intValue());
 
                 // look up the remote object
